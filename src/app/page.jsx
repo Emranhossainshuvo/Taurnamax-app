@@ -1,8 +1,9 @@
+import Navbar from "../components/Navbar";
 
 const page = () => {
   return (
-    <div>
-      <h3>this is home page</h3>
+    <div className="max-w-screen-lg mx-auto">
+      <Navbar />
     </div>
   );
 };
