@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import swal from 'sweetalert';
-import Navbar from '../../components/Navbar';
+import Link from "next/link";
 
 const AddTopic = () => {
 
@@ -32,19 +32,24 @@ const AddTopic = () => {
 
             if (response.ok) {
                 form.reset();
-                swal("Successfully added the topic");
+                swal("Success", "Topic added!", "success");
             }
         } catch (error) {
             console.error('Error sending data:', error);
         } finally {
-            setLoading(false); 
+            setLoading(false);
         }
     };
 
 
     return (
         <div className="max-w-screen-md mx-auto">
-            <Navbar />
+            <div className="bg-[#1E293B] max-w-screen-md mx-auto p-4 mt-4 mb-6 flex justify-between items-center  ">
+                <h3 className="text-white text-2xl font-semibold">Taurnamax Assignment</h3>
+                <Link href="/">
+                    <button className="bg-white text-black p-2 rounded-md">Back to home</button>
+                </Link>
+            </div>
             <form onSubmit={handleAddTopic}>
                 <input name='title' type="text" placeholder='Topic title' className='border-gray-500 border-[1px] w-full mb-3 p-2' />
                 <input type="text" name='description' placeholder='Topic Descriptin' className='border-gray-500 border-[1px] w-full p-2' />
