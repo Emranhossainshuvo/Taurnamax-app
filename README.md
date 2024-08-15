@@ -29,4 +29,4 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built w
 1. Clone the repository:
 
    ```bash
-   git clone [Taurnamax App Repository](https://github.com/Emranhossainshuvo/Taurnamax-app.git) 
+   git clone <code>(https://github.com/Emranhossainshuvo/Taurnamax-app.git)</code>
