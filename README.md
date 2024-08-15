@@ -28,5 +28,8 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built w
 
 1. Clone the repository:
 
-   ```bash
-   git clone <code>(https://github.com/Emranhossainshuvo/Taurnamax-app.git)</code>
+   ```bash```
+   <code>git clone https://github.com/Emranhossainshuvo/Taurnamax-app.git</code>
+
+   ```SSH``` 
+   <code>git clone git@github.com:DevelopersZone06/revive-client.git</code>
