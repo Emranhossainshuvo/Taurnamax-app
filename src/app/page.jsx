@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 const page = () => {
   return (
-    <div className="max-w-screen-lg mx-auto">
+    <div>
       <Navbar />
       <Displaytopics />
     </div>
