@@ -32,4 +32,4 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built w
    <code>git clone https://github.com/Emranhossainshuvo/Taurnamax-app.git</code>
 
    ```SSH``` 
-   <code>git clone git@github.com:DevelopersZone06/revive-client.git</code>
+   <code>git clone git@github.com:Emranhossainshuvo/Taurnamax-app.git</code>
