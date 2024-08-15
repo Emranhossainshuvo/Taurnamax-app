@@ -16,11 +16,33 @@ const Displaytopics = () => {
             }
         };
 
-        fetchTopics(); 
+        fetchTopics();
     }, []);
 
     const handleDeleteFromState = (id) => {
         setTopics(prevTopics => prevTopics.filter(topic => topic._id !== id));
+    };
+
+    const handleUpdateTopic = async (id, updatedTopic) => {
+        try {
+            const res = await fetch(`http://localhost:5000/topics/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(updatedTopic),
+            });
+
+            if (res.ok) {
+                setTopics((prevTopics) =>
+                    prevTopics.map((topic) =>
+                        topic._id === id ? { ...topic, ...updatedTopic } : topic
+                    )
+                );
+            }
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
@@ -29,12 +51,13 @@ const Displaytopics = () => {
                 <p>No topics found.</p>
             ) : (
                 topics.map((topic) => (
-                    <TopicsCard 
-                        key={topic._id} 
-                        id={topic._id} 
-                        title={topic.title} 
-                        description={topic.description} 
-                        onDelete={handleDeleteFromState} 
+                    <TopicsCard
+                        key={topic._id}
+                        id={topic._id}
+                        title={topic.title}
+                        description={topic.description}
+                        onDelete={handleDeleteFromState}
+                        onUpdate={handleUpdateTopic}
                     />
                 ))
             )}

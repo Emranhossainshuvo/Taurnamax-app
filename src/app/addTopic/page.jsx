@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 import Link from "next/link";
 
 const AddTopic = () => {
@@ -32,7 +32,13 @@ const AddTopic = () => {
 
             if (response.ok) {
                 form.reset();
-                swal("Success", "Topic added!", "success");
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Topic added successfull",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
             }
         } catch (error) {
             console.error('Error sending data:', error);
