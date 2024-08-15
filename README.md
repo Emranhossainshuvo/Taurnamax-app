@@ -1,4 +1,4 @@
-# Next.js CRUD Application
+# Next.js Application
 
 This project is a simple CRUD (Create, Read, Update, Delete) application built with Next.js, allowing users to manage topics efficiently. The application is designed to provide a seamless user experience with responsive design and intuitive navigation.
 
@@ -6,7 +6,7 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built w
 
 - **Create Topics**: Users can add new topics with a title and description.
 - **Read Topics**: View a list of all topics with their details.
-- **Update Topics**: Edit existing topics directly from the topics list.
+- **Update Topics**: Edit existing topics directly from the topics list that will also update the topic in the database.
 - **Delete Topics**: Remove topics with a confirmation prompt.
 
 ## Technologies Used
@@ -28,6 +28,8 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built w
 
 1. Clone the repository:
 
-   ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   ```bash```
+   <code>git clone https://github.com/Emranhossainshuvo/Taurnamax-app.git</code>
+
+   ```SSH``` 
+   <code>git clone git@github.com:Emranhossainshuvo/Taurnamax-app.git</code>
