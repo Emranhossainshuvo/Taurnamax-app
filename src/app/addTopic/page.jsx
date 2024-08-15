@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
+import swal from 'sweetalert';
 import Navbar from '../../components/Navbar';
 
 const AddTopic = () => {
@@ -31,6 +32,7 @@ const AddTopic = () => {
 
             if (response.ok) {
                 form.reset();
+                swal("Successfully added the topic");
             }
         } catch (error) {
             console.error('Error sending data:', error);
