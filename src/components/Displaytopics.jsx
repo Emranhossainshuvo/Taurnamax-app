@@ -8,7 +8,7 @@ const Displaytopics = () => {
     useEffect(() => {
         const fetchTopics = async () => {
             try {
-                const res = await fetch('http://localhost:5000/topics');
+                const res = await fetch('https://backend-theta-coral-93.vercel.app/topics');
                 const data = await res.json();
                 setTopics(data);
             } catch (error) {
@@ -25,7 +25,7 @@ const Displaytopics = () => {
 
     const handleUpdateTopic = async (id, updatedTopic) => {
         try {
-            const res = await fetch(`http://localhost:5000/topics/${id}`, {
+            const res = await fetch(`https://backend-theta-coral-93.vercel.app/topics/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

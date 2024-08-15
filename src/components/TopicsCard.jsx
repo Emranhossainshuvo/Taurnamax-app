@@ -32,7 +32,7 @@ const TopicsCard = ({ id, title, description, onDelete, onUpdate }) => {
 
         if (result.isConfirmed) {
             try {
-                const response = await fetch(`http://localhost:5000/topics/${id}`, {
+                const response = await fetch(`https://backend-theta-coral-93.vercel.app/topics/${id}`, {
                     method: 'DELETE',
                 });
                 if (response.ok) {

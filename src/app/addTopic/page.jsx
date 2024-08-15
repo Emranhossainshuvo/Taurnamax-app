@@ -19,7 +19,7 @@ const AddTopic = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/topics', {
+            const response = await fetch('https://backend-theta-coral-93.vercel.app/topics', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
