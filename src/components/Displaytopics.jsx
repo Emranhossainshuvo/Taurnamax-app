@@ -5,12 +5,15 @@ import TopicsCard from "./TopicsCard";
 const Displaytopics = () => {
     const [topics, setTopics] = useState([]);
 
+    console.log("here", topics)
+
     useEffect(() => {
         const fetchTopics = async () => {
             try {
                 const res = await fetch('https://backend-theta-coral-93.vercel.app/topics');
                 const data = await res.json();
                 setTopics(data);
+                console.log(data)
             } catch (error) {
                 console.log(error);
             }
@@ -48,7 +51,7 @@ const Displaytopics = () => {
     return (
         <>
             {topics.length === 0 ? (
-                <p>No topics found.</p>
+                    <p className="text-center text-5xl mt-56 font-semibold">Loading...</p>
             ) : (
                 topics.map((topic) => (
                     <TopicsCard
